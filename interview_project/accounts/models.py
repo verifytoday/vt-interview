@@ -79,6 +79,8 @@ class Payroll(models.Model):
         Account,
         on_delete=models.CASCADE,
     )
+    employee_first_name = models.CharField(max_length=100)
+    employee_last_name = models.CharField(max_length=100)
     check_date = models.DateField()
     pay_start = models.DateField()
     pay_end = models.DateField()
